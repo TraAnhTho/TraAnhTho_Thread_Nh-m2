@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-model href=""?>
+<class>
+   <student id = "1">
+      <name>Dat</name>
+      <address>School</address>
+      <dateOfBirth>01-11-2004</dateOfBirth>
+   </student>
+    
+   <student id = "2">
+      <name>ManMan</name>
+      <address>Home</address>
+      <dateOfBirth>11-01-2004</dateOfBirth>
+   </student>
+    
+   <student id = "3">
+      <name>Tho</name>
+      <address>Street</address>
+      <dateOfBirth>08-11-2005</dateOfBirth>
+   </student>
+</class>

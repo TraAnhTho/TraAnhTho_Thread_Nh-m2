@@ -121,7 +121,14 @@ public class Mainden{
 //	                System.out.println(sumd);
 	                Sum = sumy+sumM+sumd;
 	                System.out.println("Tổng các chữ số dateofbirth: "+Sum);
-	                if(Sum%2==0) {
+	                
+	                int dem = 0;
+	                for(int i=2;i<= Math.sqrt(Sum);i++) {
+	                	if(Sum%i==0) {
+	                		dem++;
+	                	}	
+	                }
+	                if(Sum<2 && dem>0) {
 	                	System.out.println(Sum+" không phải là số nguyên tố ");
 	                }
 	                else {
@@ -135,24 +142,17 @@ public class Mainden{
 	        DocFile.start();
 	        Age.start();
 	        isDigit.start();
-
 	        try {
-	           
+	        	DocFile.join();
 	            Age.join();
 	            isDigit.join();
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
-
 	        System.out.println("");
 	        
 	        
-	        
-	        
-	        
-	        
-	        
-	        
+	       
 	        File file2 = new File("src/BaiTap/test.xml");
 	        String string = "Student("+Age+", "+Sum+", "+isDigit+")";
 //	        String currentPath = new File("").getAbsolutePath();
@@ -164,8 +164,7 @@ public class Mainden{
 	        	System.out.println("Thông tin trống!");
 	            e.printStackTrace();
 	    }
-	}
-		
+	}	
 		
 		void DocFileOther() {
 		File file3 = new File("src/BaiTap/test.xml");
